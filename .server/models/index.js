@@ -11,6 +11,8 @@ var db        = {};
 let sequelize;
 
 if (config.use_env_variable) {
+  //From the environment, extract the key with the name provided in the config as use_env_variable
+  //and use that to establish a connection to our database.
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
   sequelize = new Sequelize(
