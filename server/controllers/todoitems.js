@@ -7,7 +7,7 @@ module.exports = {
                 content: req.body.content,
                 todoId: req.params.todoId,
             })
-            .then(todoItem => req.status(200).send(todoItem))
+            .then(todoItem => req.status(201).send(todoItem))
             .catch(error => res.status(400).send(error));
     },
 };
